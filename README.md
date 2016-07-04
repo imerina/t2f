@@ -17,7 +17,7 @@ php.exe -f t2f.php -- -b MaBase -t MaTable
 
 ## Fonctionnalités
 * Chaque table devient un formulaire HTML/PHP
-* Chaque champ devient un champ de ce formulaire
+* Chaque champ de la table devient un champ du formulaire
 * Le formulaire s'appelle lui-même (via $_SERVER['PHP_SELF'])
 * Le nom des champs du formulaire correspond aux noms des champs dans la table MySQL
 * Chaque champ du formulaire contient un <label> et un <input type="text">
