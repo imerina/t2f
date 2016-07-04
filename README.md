@@ -1,5 +1,5 @@
 # t2f
-Outil générant un formulaire HHTML à partir d'une table SQL. 
+Outil générant un formulaire HTML à partir d'une table SQL. 
 
 Fonctionne en ligne de commande via PHP.
 
@@ -19,10 +19,12 @@ php.exe -f t2f.php -- -b MaBase -t MaTable
 * Chaque table devient un formulaire HTML/PHP
 * Chaque champ de la table devient un champ du formulaire
 * Le formulaire s'appelle lui-même (via $_SERVER['PHP_SELF'])
-* Le nom des champs du formulaire correspond aux noms des champs dans la table MySQL
+* Les noms des champs du formulaire correspondent aux noms des champs dans la table MySQL
 * Chaque champ du formulaire contient un <label> et un <input type="text">
-* Chaque champ du formulaire peut être initialisé avec une variable PHP
-* Un bouton <input type="submit"> est ajouté en bas de formulaire
+* Si un champ MySQL est auto-incrémenté, il sera "hidden" dans le formulaire HTML
+* Si un champ MySQL est NOT NULL, il sera "required" dans le formulaire HTML
+* Chaque champ du formulaire est initialisé avec une variable PHP ayant le même nom
+* Des boutons <input type="submit"> et  <input type="reset"> sont ajoutés en bas de formulaire
 
 ## Sortie
 Crée un sous-dossier 'output' (si nécessaire) et y place les formulaires HTML.
